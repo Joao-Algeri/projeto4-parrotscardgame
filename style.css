@@ -47,6 +47,17 @@ body {
   width: 100px;
   height: 100px;
 }
+.back {
+  display: none;
+}
+
+.card.virado .front {
+  display: none;
+}
+.card.virado .back {
+  display: inline;
+}
+
 @media (max-width: 767px) {
   .barra-topo {
     font-size: 36px;
