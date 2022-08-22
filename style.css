@@ -31,10 +31,6 @@ body {
   /*justify-content: space-between;*/
   flex-wrap: wrap;
 }
-/* .cardFaces {
-  width: 117px;
-  height: 146px;
-} */
 .card {
   background-color: #a7e9af;
   border-radius: 5px;
@@ -46,15 +42,12 @@ body {
   align-items: center;
   margin-right: 34px;
   margin-bottom: 34px;
-  /* display: none; */
 }
 .card img {
   width: 100px;
   height: 100px;
 }
-/* .front {
-  display: none;
-} */
+
 .back {
   display: none;
 }
@@ -78,6 +71,7 @@ body {
     height: 100%;
     justify-content: center;
   }
+
   .card-pool {
     flex: column;
   }

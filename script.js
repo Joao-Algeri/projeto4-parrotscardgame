@@ -1,6 +1,8 @@
 let numeroDeCartas = null;
 let contadorDeJogadas = null;
 let contadorDePares = 0;
+let para = false;
+let retry = null;
 function carregarPagina() {
   function pedeCarta() {
     while (
@@ -8,7 +10,7 @@ function carregarPagina() {
       numeroDeCartas % 2 !== 0 ||
       numeroDeCartas > 14
     ) {
-      numeroDeCartas = prompt("Quantas cartas?");
+      numeroDeCartas = prompt("Com quantas cartas quer jogar?(4-14)");
     }
     return numeroDeCartas;
   }
@@ -124,5 +126,16 @@ function viradaErrada(cardAnterior, cardAtual) {
 function fimDoJogo() {
   if (contadorDePares == numeroDeCartas) {
     alert("Você ganhou em " + contadorDeJogadas + " jogadas!");
+    while (para == false) {
+      retry = prompt("Gostaria de jogar outra vez?(s ou n)");
+      if (retry === "s" || retry === "n") {
+        para = true;
+      }
+    }
+  }
+  if (retry === "s") {
+    const cardPool = document.querySelector(".card-pool");
+    // cardPool.innerHTML = "";
+    document.location.reload(true);
   }
 }
